@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FTP API" preserve-order="true">
+	<listeners>
+		<listener class-name="org.alfresco.utility.report.HtmlReportListener"></listener>
+		<listener class-name="org.alfresco.utility.testrail.TestRailExecutorListener"></listener>
+		<listener class-name="org.alfresco.utility.testng.OSTestMethodSelector"></listener>
+	</listeners>
+
+	<test name="FTP-All-Stages">
+		<groups>
+			<run>
+				<include name="sanity" />
+				<include name="core" />
+				<include name="full" />
+				<exclude name="demo"></exclude>
+				<exclude name="unit"></exclude>
+				<!-- networks is related to tenant tests -->
+				<exclude name="networks"></exclude>
+			</run>
+		</groups>
+		<packages>
+			<package name="org.alfresco.ftp.*"></package>
+		</packages>
+	</test>
+
+	<!-- <test name="Tenant">
+		<groups>
+			<run>
+				networks is related to tenant tests
+				<include name="networks" />
+			</run>
+		</groups>
+		<packages>
+			<package name="org.alfresco.ftp.*"></package>
+		</packages>
+	</test> -->
+</suite> <!-- Suite -->

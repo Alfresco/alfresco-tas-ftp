@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.alfresco.tas</groupId>
+    <artifactId>ftp</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>alfresco-tas-ftp</name>
+    <description>TAS - File Transfer Protocol (FTP)</description>
+    <parent>
+        <groupId>org.alfresco</groupId>
+        <artifactId>alfresco-super-pom</artifactId>
+        <version>10</version>
+    </parent>
+
+    <organization>
+        <name>Alfresco Software</name>
+        <url>http://www.alfresco.com/</url>
+    </organization>
+    <developers>
+        <developer>
+            <name>Paul Brodner</name>
+            <roles>
+                <role>Test Automation Architect</role>
+            </roles>
+        </developer>
+    </developers>
+    <properties>
+        <maven.build.sourceVersion>11</maven.build.sourceVersion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <tas.utility.version>3.0.8</tas.utility.version>
+        <commons-net.version>3.3</commons-net.version>
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+        <maven-release.version>2.5.3</maven-release.version>
+        <java.version>11</java.version>
+    </properties>
+
+    <scm>
+        <connection>scm:git:https://github.com/Alfresco/alfresco-tas-ftp.git</connection>
+        <developerConnection>scm:git:https://github.com/Alfresco/alfresco-tas-ftp.git</developerConnection>
+        <url>https://github.com/Alfresco/alfresco-tas-ftp</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://issues.alfresco.com/jira/browse/</url>
+    </issueManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>alfresco-public</id>
+            <url>https://artifacts.alfresco.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>alfresco-public</id>
+            <url>https://artifacts.alfresco.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <release>${java.version}</release>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven-release.version}</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <doclint>none</doclint>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- alfresco tester settings -->
+        <dependency>
+            <groupId>org.alfresco.tas</groupId>
+            <artifactId>utility</artifactId>
+            <version>${tas.utility.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>${commons-net.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

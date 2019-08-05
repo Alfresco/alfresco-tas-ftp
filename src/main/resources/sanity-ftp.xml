@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FTP" parallel="classes" thread-count="1" preserve-order="true">
+	<test name="FTPSanity">
+		<groups>
+			<run>
+				<include name="sanity" />
+				<exclude name="demo"></exclude>
+				<exclude name="unit"></exclude>
+				<exclude name="networks"></exclude>
+			</run>
+		</groups>
+		
+		<packages>
+			<package name="org.alfresco.ftp.*"></package>
+		</packages>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
