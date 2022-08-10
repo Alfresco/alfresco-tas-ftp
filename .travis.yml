@@ -1,8 +1,7 @@
-dist: xenial
+dist: focal
 sudo: required
 language: java
-jdk:
-  - openjdk11
+jdk: openjdk17
 
 cache:
   directories:
