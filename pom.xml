@@ -25,13 +25,15 @@
         </developer>
     </developers>
     <properties>
-        <maven.build.sourceVersion>11</maven.build.sourceVersion>
+        <java.version>17</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.build.sourceVersion>17</maven.build.sourceVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <tas.utility.version>4.0.0</tas.utility.version>
         <commons-net.version>3.8.0</commons-net.version>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
         <maven-release.version>2.5.3</maven-release.version>
-        <java.version>11</java.version>
     </properties>
 
     <scm>
