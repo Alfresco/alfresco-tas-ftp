@@ -33,7 +33,7 @@
         <tas.utility.version>4.0.0</tas.utility.version>
         <commons-net.version>3.9.0</commons-net.version>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-        <maven-release.version>2.5.3</maven-release.version>
+        <maven-release.version>3.0.0</maven-release.version>
     </properties>
 
     <scm>
