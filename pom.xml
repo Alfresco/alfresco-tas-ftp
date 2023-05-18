@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.alfresco.tas</groupId>
     <artifactId>ftp</artifactId>
-    <version>1.16-SNAPSHOT</version>
+    <version>1.16</version>
     <name>alfresco-tas-ftp</name>
     <description>TAS - File Transfer Protocol (FTP)</description>
     <parent>
@@ -40,7 +40,7 @@
         <connection>scm:git:https://github.com/Alfresco/alfresco-tas-ftp.git</connection>
         <developerConnection>scm:git:https://github.com/Alfresco/alfresco-tas-ftp.git</developerConnection>
         <url>https://github.com/Alfresco/alfresco-tas-ftp</url>
-        <tag>HEAD</tag>
+        <tag>v1.16</tag>
     </scm>
 
     <issueManagement>
