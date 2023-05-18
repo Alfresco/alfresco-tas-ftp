@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.alfresco.tas</groupId>
     <artifactId>ftp</artifactId>
-    <version>1.15-SNAPSHOT</version>
+    <version>1.17-SNAPSHOT</version>
     <name>alfresco-tas-ftp</name>
     <description>TAS - File Transfer Protocol (FTP)</description>
     <parent>
@@ -31,7 +31,7 @@
         <maven.build.sourceVersion>17</maven.build.sourceVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <tas.utility.version>4.0.0</tas.utility.version>
-        <commons-net.version>3.8.0</commons-net.version>
+        <commons-net.version>3.9.0</commons-net.version>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
         <maven-release.version>2.5.3</maven-release.version>
     </properties>
