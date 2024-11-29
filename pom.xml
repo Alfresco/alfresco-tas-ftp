@@ -32,7 +32,7 @@
         <maven.build.sourceVersion>${java.version}</maven.build.sourceVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <tas.utility.version>5.0.0</tas.utility.version>
-        <commons-net.version>3.9.0</commons-net.version>
+        <commons-net.version>3.10.0</commons-net.version>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
         <maven-release.version>2.5.3</maven-release.version>
     </properties>
